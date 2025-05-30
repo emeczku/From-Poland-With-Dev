@@ -15,5 +15,6 @@ Create a `.env` file in `apps/api/` with the following content:
 
 ```env
 DUMMY_API_URL=https://example.com/api/rate
-DUMMY_API_KEY=your-api-key-here
+API_KEY=your-api-key-here
 ```
+

@@ -1,10 +1,12 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { CacheModule } from '@nestjs/cache-manager';
+import { ExchangeController } from './exchange.controller';
+import { ExchangeService } from './exchange.service';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [CacheModule.register(), ConfigModule.forRoot()],
+  controllers: [ExchangeController],
+  providers: [ExchangeService],
 })
 export class AppModule {}
